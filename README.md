@@ -1,5 +1,6 @@
 # aws-snowball
 ## Create a Job
+- https://docs.aws.amazon.com/snowball/latest/ug/create-job-ug.html
 ## Upload data
 ### Generate a list
 1. Install the tool
