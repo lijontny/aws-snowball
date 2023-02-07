@@ -14,5 +14,5 @@ docker run --rm -v ~/.aws:/root/.aws -v /mount_local:/mnt s5cmd cp --storage-cla
 
 ### upload from a list
 ```shell
-docker run --rm -v ~/.aws:/root/.aws -v /mount_local:/mnt --entrypoint /bin/sh s5cmd -c 'for i in `cat /mnt/list.txt`; do /s5cmd cp /mnt/$i s3://<bucket>/; done'
+docker run --rm -v ~/.aws:/root/.aws -v /mount_local:/mnt --entrypoint /bin/sh s5cmd -c 'for i in `cat /mnt/list.txt`; do /s5cmd --endpoint <IP> --profile <AWS_Profile> cp /mnt/$i s3://<bucket>/; done'
 ```
